@@ -1,0 +1,633 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Play:wght@400;700&family=Ubuntu:wght@300;500;700&display=swap");
+
+/*-------------*/
+/* QUICK RESET */
+/*-------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- */
+/* HELPERS */
+/* ---------- */
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+/*---------*/
+/* GLOBALS*/
+/*---------*/
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #f8f9fa;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/space-bg.jpg");
+  background-position: center;
+  background-size: repeat;
+}
+
+h1 {
+  text-align: center;
+  padding: 2.4rem;
+  font-family: "Play", sans-serif;
+  font-size: 6.4rem;
+  font-weight: 700;
+  letter-spacing: 20px;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-weight: 600;
+  padding-bottom: 2.4rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+a {
+  transition: 0.25s;
+}
+
+a,
+a:visited {
+  color: #f8f9fa;
+}
+
+ion-icon {
+  font-size: 4.8rem;
+}
+
+/*--------------*/
+/* SOLAR SYSTEM */
+/*--------------*/
+
+#solar-system {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container--solar {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sun .planet {
+  aspect-ratio: 1;
+}
+
+.planet--sm {
+  width: 5rem;
+}
+
+.planet--md {
+  width: 8rem;
+}
+
+.sun {
+  margin-right: 2.4rem;
+  width: 40rem;
+}
+
+.jupiter {
+  width: 17rem;
+}
+
+.saturn {
+  width: 30rem;
+}
+
+/* Position */
+
+.venus {
+  transform: translate(0, -10rem);
+}
+
+.earth {
+  transform: translate(0, 10rem);
+}
+
+.mars {
+  transform: translate(0, -15rem);
+}
+
+.saturn {
+  transform: translate(0, -20rem);
+}
+
+.neptune {
+  transform: translate(0, 15rem);
+}
+
+/* Hover states */
+
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+.pulse--saturn:hover,
+.pulse--saturn:focus {
+  animation: pulse 1s;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@keyframes pulse {
+  0% {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 #fff;
+  }
+}
+
+/*--------------*/
+/* INFO SECTION */
+/*--------------*/
+
+.container-card {
+  width: 95%;
+  max-width: 120rem;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 4.8rem;
+}
+
+.image-card {
+  width: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.info-card {
+  width: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2.4rem 4.8rem 3.6rem 4.8rem;
+}
+
+/* Hover states */
+
+.link--up,
+.link--up:visited {
+  margin-top: 4.8rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.link--up:hover,
+.link--up:active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* INFO SUN */
+
+.info-card--sun > h2 {
+  color: #ffd8a8;
+}
+
+.image-card--sun {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(217, 72, 15, 0.5),
+      rgba(247, 103, 7, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/sun.jpg");
+}
+
+/* INFO MERCURY */
+
+.info-card--mercury > h2 {
+  color: #dee2e6;
+}
+
+.image-card--mercury {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(73, 80, 87, 0.5),
+      rgba(206, 212, 218, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/mercury.jpg");
+}
+
+/* INFO VENUS */
+
+.info-card--venus > h2 {
+  color: #eebefa;
+}
+
+.image-card--venus {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(229, 153, 247, 0.5),
+      rgba(243, 217, 250, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/venus.jpg");
+}
+
+/* INFO EARTH */
+
+.info-card--earth > h2 {
+  color: #a5d8ff;
+}
+
+.image-card--earth {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(165, 216, 255, 0.5),
+      rgba(51, 155, 240, 0.612),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/earth.jpg");
+}
+
+/* INFO MARS */
+
+.info-card--mars > h2 {
+  color: #ffc9c9;
+}
+
+.image-card--mars {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(255, 107, 107, 0.543),
+      rgba(255, 168, 168, 0.536),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/mars.jpg");
+}
+
+/* INFO JUPITER */
+
+.info-card--jupiter > h2 {
+  color: #ffec99;
+}
+
+.image-card--jupiter {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(230, 119, 0, 0.5),
+      rgba(252, 195, 25, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/jupiter.jpg");
+}
+
+/* INFO SATURN */
+
+.info-card--saturn > h2 {
+  color: #f1f3f5;
+}
+
+.image-card--saturn {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(233, 236, 239, 0.468),
+      rgba(241, 243, 245, 0.516),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/saturn.jpg");
+}
+
+/* INFO URANUS */
+.info-card--uranus > h2 {
+  color: #99e9f2;
+}
+
+.image-card--uranus {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(59, 200, 219, 0.5),
+      rgba(197, 245, 250, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/uranus.jpg");
+}
+
+/* INFO NEPTUNE */
+.info-card--neptune > h2 {
+  color: #91a7ff;
+}
+
+.image-card--neptune {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(92, 124, 250, 0.5),
+      rgba(186, 200, 255, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("./images/neptune.jpg");
+}
+
+/*---------*/
+/* QUERIES */
+/*---------*/
+
+/* Very large: 1456px */
+
+@media (max-width: 91em) {
+  .jupiter {
+    width: 14rem;
+  }
+
+  .saturn {
+    width: 22rem;
+  }
+
+  .sun {
+    width: 30rem;
+    margin-right: 1.8rem;
+  }
+}
+
+/* Large: 1200px */
+@media (max-width: 75em) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  p {
+    line-height: 2.4rem;
+  }
+
+  .sun {
+    width: 25rem;
+  }
+
+  .planet--md {
+    width: 7rem;
+  }
+  .jupiter {
+    width: 12rem;
+  }
+
+  .saturn {
+    width: 20rem;
+  }
+
+  /* CARD */
+  .container-card {
+    width: 90%;
+  }
+}
+
+/* Medium: 992px */
+@media (max-width: 62em) {
+  .sun,
+  .planet {
+    position: absolute;
+    transform: translate(0, 0);
+  }
+
+  .sun {
+    margin: 0;
+    width: 25rem;
+    transform: translate(0, -30rem);
+  }
+
+  .mercury {
+    transform: translate(0rem, -14rem);
+  }
+  .venus {
+    transform: translate(5rem, -8rem);
+  }
+  .earth {
+    transform: translate(-4rem, -6rem);
+  }
+  .mars {
+    transform: translate(6rem, 0rem);
+  }
+
+  .jupiter {
+    width: 10rem;
+    transform: translate(-5rem, 4rem);
+  }
+
+  .saturn {
+    width: 20rem;
+    transform: translate(8rem, 12rem);
+  }
+
+  .uranus {
+    transform: translate(-6rem, 14rem);
+  }
+
+  .neptune {
+    transform: translate(0, 22rem);
+  }
+
+  /* CARD */
+
+  .container-card {
+    width: 70%;
+  }
+
+  .image-card {
+    display: none;
+  }
+
+  .info-card {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .info-card--sun {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("./images/sun.jpg");
+  }
+
+  .info-card--mercury {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/mercury.jpg");
+  }
+  .info-card--venus {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/venus.jpg");
+  }
+
+  .info-card--earth {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/earth.jpg");
+  }
+  .info-card--mars {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/mars.jpg");
+  }
+  .info-card--jupiter {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/jupiter.jpg");
+  }
+  .info-card--saturn {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/saturn.jpg");
+  }
+  .info-card--uranus {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/uranus.jpg");
+  }
+  .info-card--neptune {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/neptune.jpg");
+  }
+}
+
+/* Mobile Landscape: 780px */
+@media (max-width: 50em) {
+  h1 {
+    font-size: 3.6rem;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .planet--sm {
+    width: 3rem;
+  }
+
+  .planet--md {
+    width: 5rem;
+  }
+
+  .sun {
+    margin: 0;
+    width: 18rem;
+    transform: translate(0, -22rem);
+  }
+
+  .mercury {
+    transform: translate(0rem, -11rem);
+  }
+  .venus {
+    transform: translate(5rem, -6rem);
+  }
+  .earth {
+    transform: translate(-4rem, -5rem);
+  }
+  .mars {
+    transform: translate(6rem, 0rem);
+  }
+
+  .jupiter {
+    width: 10rem;
+    transform: translate(-5rem, 4rem);
+  }
+
+  .saturn {
+    width: 18rem;
+    transform: translate(8rem, 9rem);
+  }
+
+  .uranus {
+    transform: translate(-6rem, 14rem);
+  }
+
+  .neptune {
+    transform: translate(0, 20rem);
+  }
+
+  /* CARD */
+
+  .container-card {
+    width: 90%;
+  }
+
+  .info-card {
+    padding: 1.6rem 2.4rem;
+  }
+}

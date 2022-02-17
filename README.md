@@ -12,21 +12,14 @@ Now that I have the skills, I decided to try it once again but this time with co
 
 - HTML5
 - CSS3
-- JavaScript
 
 ## Screenshots
 
 - Desktop
 
-![Desktop Header](images/main-desktop-header.jpg)
+![Desktop Header](screenshots/main-desktop-header.jpg)
 
-![Desktop Info](images/main-desktop-info.jpg)
-
-- Mobile
-
-![Mobile Header](images/main-mobile-header.jpg)
-
-![Mobile Info](images/main-mobile-info.jpg)
+![Desktop Info](screenshots/main-desktop-info.jpg)
 
 ## Links
 

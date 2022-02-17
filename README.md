@@ -23,7 +23,7 @@ Now that I have the skills, I decided to try it once again but this time with co
 
 ## Links
 
-[live Site URL](https://sanramu93.github.io/solar-system-website)
+[live Site URL](https://sanramu93.github.io/solar-system-page)
 
 ## Author
 
